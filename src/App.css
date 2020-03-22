@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cards-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  padding: 0 200px;
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  display: flex;
+  width: 420px;
+  height: 200px;
+  margin: 20px;
+  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.6);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-info {
+  background-color: #1a75bc;
+  color: #FFF;
+  padding: 0 8px;
+}
+
+.card-info:hover {
+  background-color: #fdb44b
+}
+
+.card-image {
+  width: 550px;
+  height: auto;
+  overflow: hidden;
+}
+
+.cat-image {
+  width: 250px;
+  height: 100%;
+  transition: all 1s;
+}
+
+.cat-image:hover {
+  transform: scale(1.3);
+}
+
+.openModal {
+  background-color: #1a75bc;
+  border: 1px solid #FFF;
+  padding: 5px;
+  border-radius: 6px;
+  color: #FFF; 
+}
+
+.openModal:hover {
+  background-color: #FFF;
+  color: #1a75bc;
+  cursor: pointer;
+  border: 1px solid #1a75bc; 
 }
