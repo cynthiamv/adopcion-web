@@ -1,6 +1,10 @@
 import React from 'react';
 import './App.css';
+import Navbar from './components/Navbar';
+import Main from './components/Main';
+import Form from './components/Form';
 import Card from './components/Card';
+import Footer from './components/Footer';
 
 const gatos = [
   {
@@ -13,6 +17,7 @@ const gatos = [
       'https://animalrevista.com/wp-content/uploads/2016/07/gatas-calico-tricolor-animal-la-revista.jpg',
     colores: ['tricolor', 'negro', 'blanco', 'naranja', 'rayado'],
     sexo: 'm',
+    disponible: false
   },
   {
     name: 'Muzzarella',
@@ -24,6 +29,7 @@ const gatos = [
       'https://www.imagenesdegatos.net/wp-content/uploads/2015/12/gato-gris-ojos-naranja-3.jpg',
     colores: ['gris'],
     sexo: 'f',
+    disponible: true
   },
   {
     name: 'Artilugia',
@@ -35,6 +41,7 @@ const gatos = [
       'https://image.freepik.com/foto-gratis/primer-plano-hermoso-gato-negro-blanco-marcas-sueno-cara-acostado-piso-concreto_44161-220.jpg',
     colores: ['negro', 'blanco'],
     sexo: 'f',
+    disponible: true
   },
   {
     name: 'Wosito',
@@ -46,6 +53,7 @@ const gatos = [
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkqkcBuVxZdrxWFYiEhoR3SpIioYCMesijUKHfjh7pTz-ctaf5&s',
     colores: ['rayado'],
     sexo: 'm',
+    disponible: true
   },
   {
     name: 'Calamardo',
@@ -57,19 +65,23 @@ const gatos = [
       'https://misanimales.com/wp-content/uploads/2018/07/mito-del-gato-negro.jpg',
     colores: ['negro'],
     sexo: 'm',
+    disponible: true
   },
 ];
 
 const App = () => {
   return (
+    <>
+    <Navbar/>
+    <Main/>
+    <Form/>
     <div className="cards-container">
       {
-        gatos.map((gato, i) =>
-          <Card key={i} imagen={gato.img} nombre={gato.name} descripcion={gato.shortDesc}/>
-        )
-      }
-      
+        gatos.map((gato, i) => <Card key={i} info={gato}/>)
+      }      
     </div>
+    <Footer/>
+    </>
   );
 }
 
