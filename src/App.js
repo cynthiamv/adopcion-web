@@ -3,8 +3,8 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Main from './components/Main';
 import Form from './components/Form';
-import Card from './components/Card';
 import Footer from './components/Footer';
+import ContenedorDeTarjetas from './components/ContenedorDeTarjetas';
 
 const gatos = [
   {
@@ -72,15 +72,11 @@ const gatos = [
 const App = () => {
   return (
     <>
-    <Navbar/>
-    <Main/>
-    <Form/>
-    <div className="cards-container">
-      {
-        gatos.map((gato, i) => <Card key={i} info={gato}/>)
-      }      
-    </div>
-    <Footer/>
+      <Navbar/>
+      <Main/>
+      <Form/>
+      <ContenedorDeTarjetas gatos={gatos} />
+      <Footer/>
     </>
   );
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import './Main.scss';
 import main_img from '../img/main_img.jpg';
 
 const Main = () => {
